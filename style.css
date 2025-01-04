@@ -1,0 +1,384 @@
+/* The :root pseudo-class represents an element that is the root of the document. In HTML, this is always the HTML element. */
+/* One technical difference between :root and html is that :root - being a pseudo class has a greater specificity than html (a type selector)*/
+:root {
+  /* below is how we set custom variables in css */
+  --text-color: #1a1c20;
+  --link-color: #4a76ee;
+  --background-color: #eeeff1;
+}
+
+/* the * selector selects ALL elements on a page. We are using it sparingly, only to do some basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  font-size: 16px;
+}
+
+/* targeting all anchor elements */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-right: 30px;
+}
+
+.navRight {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.navRight a {
+  /* margin-bottom: 4px; */
+  margin-right: 20px;
+}
+
+.navLeft a {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#email {
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.navRight a span {
+  display: none;
+}
+
+.fa-brands {
+  font-size: 1.7rem;
+}
+
+@media (min-width: 778px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+  }
+
+  .navRight {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navRight a {
+    margin-right: 20px;
+  }
+
+  .navRight a span {
+    display: inline-block;
+  }
+}
+
+/* avatar */
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  padding-left: 20px;
+  padding-right: 45px;
+  align-items: center;
+  padding-right: px;
+}
+
+img {
+  width: 200px;
+  border-radius: 5%;
+  height: 266.666667px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.avatarText {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatarText p {
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarText a:first-of-type {
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 17px;
+  width: 100px;
+  margin-right: 20px;
+  color: #4a76ee;
+  
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 20%);
+}
+
+.avatarText a:nth-of-type(2) {
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+  color: #4a76ee;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 20%);
+}
+
+/* .avatarText a:nth-of-type(3) {
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  width: 100px;
+  padding: 5px;
+  color: #4a76ee;
+} */
+
+.avatarText a:nth-of-type(2):hover, .avatarText a:nth-of-type(1):hover {
+  background-color: #4a76ee;
+  color: var(--background-color);
+}
+
+.avatarText h1{
+  display: none;
+}
+
+@media (min-width: 778px) {
+  .avatar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    padding-left: 100px;
+    align-items: center;
+    padding-right: 100px;
+  }
+  .avatarIntro{
+    order: 1;
+    display: none;
+  }
+
+  .avatarText {
+    order: 2;
+  }
+
+  .avatarText h1{
+    padding-left: 25px;
+    margin-bottom: 15px;
+  }
+
+  .avatarPicture {
+    order: 3;
+  }
+  img{
+    width: 300px;
+    height: 300px;
+  }
+ 
+  .avatarText h1{
+    display:inline-block; 
+  }
+
+ 
+}
+
+
+
+/* skills */
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skillsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#title {
+  margin-top: 120px;
+  margin-bottom: 10px;
+}
+
+#text {
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+li {
+  margin-right: 10px;
+  border: solid;
+  width: 105px;
+  border-radius: 5px;
+  text-align: center;
+  border-width: 2px;
+  border-color: rgb(0, 0, 0, 20%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li:nth-of-type(1){
+  margin-left: 15px;
+}
+li:nth-of-type(4){
+  margin-right: 15px;
+}
+
+
+
+
+
+
+#skillDisplay img {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+  border-radius: 0;
+}
+
+@media (min-width: 778px) {
+ 
+  #skills{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #skillsText {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: start;
+  }
+
+  #skillsText #title{
+    margin-left: 45px;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+ 
+ul{
+  flex-direction: column;
+  align-items: center;
+}
+li{
+  margin-top: 15px ;
+}
+
+li:nth-of-type(1){
+  margin-left: 0px;
+}
+
+li:nth-of-type(4){
+  margin-right: 10px;
+}
+
+
+
+
+}
+
+
+
+
+/* contact */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactText {
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
+#contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactLinkedIn,
+#contactEmail {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #4a76ee;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 20%);
+}
+
+#contactEmail {
+  margin-bottom: 50px;
+  transition: background-color 0.5s;
+}
+
+#contactEmail:hover,#contactLinkedIn:hover{
+  background-color: #194ee0 !important;
+}
+
+
+@media (min-width: 778px) {
+ 
+#contact{
+  flex-direction: column;
+  align-items: start;
+}
+
+#contact #title{
+  margin-left: 125px
+}
+#contactText {
+  padding-left: 82px
+}
+
+#contactLinks {
+  margin-left: 41vw
+}
+}
